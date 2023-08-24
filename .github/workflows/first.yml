@@ -18,6 +18,7 @@ jobs:
       - name: Step two
         run: "Get-ChildItem Env: | Sort-Object Name"
   job3:
+      needs: [job1, job2]
       name: Thjird job
       runs-on: macos-latest
       steps:
